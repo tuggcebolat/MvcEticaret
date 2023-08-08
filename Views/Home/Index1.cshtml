@@ -1,0 +1,15 @@
+﻿@model List<ProductsItem>
+
+<h1>Welcome to our store</h1>
+
+<div class="product-list">
+    @foreach (var product in Model)
+    {
+        <vc:product-item title="@product.Title"
+                         start-count="@product.StartCount"
+                         old-price="@product.OldPrice"
+                         price="@product.Price"
+                         image-url="@product.ImageUrl"
+                         is-sale="@product.IsSale" />
+    }
+</div>

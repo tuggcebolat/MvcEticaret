@@ -1,0 +1,21 @@
+﻿@model ProductsItem
+
+<div class="product-item">
+    <img src="@Model.ImageUrl" alt="@Model.Title" class="product-image" />
+    <h2>@Model.Title</h2>
+    <p>Starting at: @Model.StartCount</p>
+    @if (Model.IsSale)
+    {
+        <p><s>@Model.OldPrice.ToString("C")</s> <span class="sale-price">@Model.Price.ToString("C")</span></p>
+    }
+    else
+    {
+        <p>@Model.Price.ToString("C")</p>
+    }
+</div>
+
+
+
+
+
+

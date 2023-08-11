@@ -15,20 +15,6 @@ namespace MvcEticaret.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public PartialViewResult Navbar()
-        {
-            return PartialView();
-        }
-        public PartialViewResult Footer()
-        {
-          
-           return PartialView();
-        }
-        public IActionResult Index1()
-        {
             var products = new List<ProductsItem>
             {
                 new ProductsItem
@@ -40,9 +26,85 @@ namespace MvcEticaret.Controllers
                     ImageUrl = "product1.jpg",
                      IsSale = true
                 },
-
+                new ProductsItem
+                {
+                     Title = "Product 2",
+                      StartCount = 6,
+                     OldPrice = 22.99M,
+                      Price = 18.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 3",
+                      StartCount = 5,
+                     OldPrice = 50.99M,
+                      Price = 35.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 4",
+                      StartCount = 6,
+                     OldPrice = 22.99M,
+                      Price = 18.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 5",
+                      StartCount = 5,
+                     OldPrice = 50.99M,
+                      Price = 35.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 6",
+                      StartCount = 6,
+                     OldPrice = 22.99M,
+                      Price = 18.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 7",
+                      StartCount = 6,
+                     OldPrice = 22.99M,
+                      Price = 18.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
+                new ProductsItem
+                {
+                     Title = "Product 8",
+                      StartCount = 6,
+                     OldPrice = 22.99M,
+                      Price = 18.99M,
+                    ImageUrl = "product1.jpg",
+                     IsSale = true
+                },
             };
-            return View("Index1",products);
+            return View(products);
+        }
+
+        public PartialViewResult Navbar()
+        {
+            return PartialView();
+        }
+        public PartialViewResult Footer()
+        {
+
+            return PartialView();
+        }
+        public IActionResult Index1()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
